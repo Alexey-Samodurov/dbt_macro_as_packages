@@ -1,0 +1,49 @@
+version: 2
+
+macros:
+  - name: generate_postgres_source
+    description: "Generate postgres source as YAML"
+    arguments:
+      - name: schema_name
+        type: string
+        description: "Schema name"
+
+      - name: database_name
+        type: string
+        description: "Database name by default target.database"
+
+      - name: generate_columns
+        type: boolean
+        description: "Flag to generate columns by default False"
+
+      - name: include_descriptions
+        type: boolean
+        description: "Flag to include descriptions by default False"
+
+      - name: include_data_types
+        type: boolean
+        description: "Flag to include data types by default False"
+       
+      - name: table_pattern
+        type: string
+        description: "Table pattern by default %"
+
+      - name: exclude
+        type: string
+        description: "Exclude tables by default ''"
+
+      - name: name
+        type: string
+        description: "Name of the source by default postgres"
+
+      - name: table_names
+        type: string
+        description: "Table names by default None"
+
+      - name: include_database
+        type: boolean
+        description: "Flag to include database by default False"
+
+      - name: include_schema
+        type: boolean
+        description: "Flag to include schema by default False"
